@@ -1,0 +1,102 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Zircon",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#directives"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.zircon",
+                    "match": "\\b(if|while)\\b"
+                },
+                {
+                    "name": "keyword.operator.zircon",
+                    "match": "(\\+|-|\\*|/|==|!=|:|=)"
+                },
+                {
+                    "name": "keyword.other.zircon",
+                    "match": "\\b(proc|cast)\\b"
+                }
+            ]
+        },
+        "directives": {
+            "patterns": [
+                {
+                    "name": "keyword.other.zircon",
+                    "match": "#\\b(extern)\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.zircon",
+                    "match": "\\b(void|type|int|uint|s8|s16|s32|s64|u8|u16|u32|u64)\\b"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.binary.zircon",
+                    "match": "\\b(0b[0-9_]+)\\b"
+                },
+                {
+                    "name": "constant.numeric.octal.zircon",
+                    "match": "\\b(0o[0-9_]+)\\b"
+                },
+                {
+                    "name": "constant.numeric.decimal.zircon",
+                    "match": "\\b((0d)?[0-9_]+)\\b"
+                },
+                {
+                    "name": "constant.numeric.hexadecimal.zircon",
+                    "match": "\\b(0x[0-9_]+)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.zircon",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.zircon",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "match": "\\b(\\w+)\\b\\s*:",
+                    "captures": {
+                        "1": {
+                            "name": "variable.other.zircon"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "scopeName": "source.zircon"
+}

@@ -1,0 +1,37 @@
+{
+    "name": "zircon-language-support",
+    "displayName": "Zircon Language Support",
+    "description": "Syntax highlighting for the Zircon language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "zircon",
+                "aliases": [
+                    "Zircon",
+                    "zircon"
+                ],
+                "extensions": [
+                    ".zircon"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "zircon",
+                "scopeName": "source.zircon",
+                "path": "./syntaxes/zircon.tmLanguage.json"
+            }
+        ]
+    },
+    "repository": {
+        "url": ""
+    }
+}
