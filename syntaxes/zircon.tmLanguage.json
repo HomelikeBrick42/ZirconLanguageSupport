@@ -49,7 +49,7 @@
         "types": {
             "patterns": [
                 {
-                    "name": "storage.type.zircon",
+                    "name": "entity.name.type.zircon",
                     "match": "\\b(void|type|int|uint|s8|s16|s32|s64|u8|u16|u32|u64)\\b"
                 }
             ]
@@ -88,12 +88,12 @@
         "variables": {
             "patterns": [
                 {
-                    "match": "\\b(\\w+)\\b\\s*:",
-                    "captures": {
-                        "1": {
-                            "name": "variable.other.zircon"
-                        }
-                    }
+                    "name": "entity.name.function.zircon",
+                    "match": "\\b\\w+(?=\\()"
+                },
+                {
+                    "name": "variable.other.zircon",
+                    "match": "\\b\\w+\\b"
                 }
             ]
         }
