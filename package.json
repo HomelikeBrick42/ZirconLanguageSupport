@@ -3,7 +3,7 @@
     "displayName": "Zircon Language Support",
     "description": "Syntax highlighting for the Zircon language",
     "publisher": "HomelikeBrick42",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.68.0"
     },
