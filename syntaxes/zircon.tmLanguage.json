@@ -34,7 +34,7 @@
                 },
                 {
                     "name": "keyword.other.zircon",
-                    "match": "\\b(proc|cast)\\b"
+                    "match": "\\b(proc|cast|transmute|size_of|type_of)\\b"
                 }
             ]
         },
